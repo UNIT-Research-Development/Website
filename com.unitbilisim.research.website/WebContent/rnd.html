@@ -17,6 +17,7 @@
 <!-- <link href="stylesheets/navbar-fixed-top.css" rel="stylesheet">
  -->
   <link href="stylesheets/sticky-footer-navbar.css" rel="stylesheet">
+   <link href="stylesheets/blog.css" rel="stylesheet">
  
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -28,7 +29,25 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    
+ <script type="text/javascript">
+ 
+ function view(sender) {
+	 	
+	 if(document.getElementById(sender.id).innerHTML == 'Hide Details'){
+		
+		    document.getElementById(sender.id+'Body').style.display = 'none';
+			document.getElementById(sender.id).innerHTML = 'View Details';
+			
+	 }else{
+			
+			document.getElementById(sender.id+'Body').style.display = 'block';
+			document.getElementById(sender.id).innerHTML = 'Hide Details';
+		}
+		
+ }
+ 
+ 
+ </script>   
 </head>
 <body>
 
@@ -42,7 +61,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="images/logo.png" alt="UNIT"></a>
+          <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="UNIT"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -77,6 +96,138 @@
     </div>
     <hr class="featurette-header"> 
     
+    <div style="width:80%; margin: 0 auto; padding-top:75px;">
+    
+    	<div class="blog-post">
+            <div class="toggle-item-title">
+					<div> 
+						<h3 style="float: left; width: 85%;">MVV4PFD (Modeling, Validation and Verification of Process Flow
+						Diagram for Petroleum Refineries)</h3> 
+						<button style="float: right;width: 15%;" id="item1" class="btn btn-lg btn-primary" onclick="view(this);">View Details</button>
+					</div>
+					<p style="clear:both;">Rafineri süreçlerinde uygulanan operasyonel koşullar, işlenen
+						ham petrol türüne ve ürün arz/talep dengesine göre değişkenlik
+						göstermektedir. Bu değişikliklere hızlı cevap verebilmek ve
+						optimum işletme koşullarını belirleyebilmek için rafineri süreç
+						modellerinin bilgisayar ortamında oluşturulmasına ve farklı
+						modeller üzerinde çeşitli senaryo analizlilerinin yapılmasına
+						ihtiyaç vardır.</p>
+				</div> 
+				<div class="toggle-item-body" id="item1Body" style="display: none;">
+					<p>Bu proje petrol rafinerilerinde proses mühendisleri tarafından
+						yaygın olarak kullanılan Süreç Akış Diagramlarının ("Process Flow
+						Diagrams") (PFD) görsel ve metinsel bir modelleme aracı yardımıyla
+						tasarlanmasını; aynı zamanda bu modellerin üzerinde otomatik
+						doğrulama ve sağlama ("Verification & Validation") yapılabilmesini
+						olanaklı kılan bir çatının geliştirilmesi hedeflenmektedir.</p>
+					<p>Projenin literatür araştırması ve fizibilite çalışması devam
+						etmekte olup Türkiye'nin önde gelen bir sanayi kuruluşu ile ortak
+						bir Ar-Ge projesi olarak geçekleştirilmesi ve 1501-TÜBİTAK Sanayi
+						Ar-Ge Projeleri Destekleme Programına başvurusu söz konusudur.</p>
+				</div>
+						
+						
+          </div><!-- /.blog-post -->
+          
+          <div class="blog-post">
+            <div class="toggle-item-title">
+					<div> 
+						<h3 style="float: left; width: 85%;">SpecGEN (Metamodel Specification Generator for Domain Specific
+						Modeling Languages)</h3> 
+						<button style="float: right;width: 15%;" id="item2" class="btn btn-lg btn-primary" onclick="view(this);">View Details</button>
+					</div>
+					<p style="clear:both;">Model Güdümlü Mühendislik ("Model Driven Engineering")
+						amaçlarını gerçekleştirmek için farklı yaklaşımlar kullanır. Bu
+						yöntemlerden birisi, Alana Özgü Dil ("Domain Specific Language")
+						(DSL) geliştirmedir. DSL'ler belirli bir uygulama alanına ait
+						kavram ve terminolojileri (bazı notasyonlar şeklinde) inceler ve
+						çalışma alanına dair gereksinimleri sağlar. DSL son kullanıcılar
+						için (alan uzmanları) alana ("domain") özgü bir sorun alanı ile
+						ilgili soyutlamalar sayesinde bir problemin özünü tanımlamak için
+						imkan sağlar. Günümüzde, bir alana özgü dil geliştirirken,
+						beraberinde dilin üstmodeline dair dokümantasyonu ya da
+						spesifikasyonu proje boyunca güncel tutmak oldukça zordur.</p>
+				</div>
+				<div class="toggle-item-body" id="item2Body" style="display: none;">
+					<p>Bu çalışma ile herhangi bir üst-modelin web tabanlı
+						dokümantasyonunu otomatik olarak üretmek için bir araç
+						geliştirilmiştir. "Üstmodel Spesifikasyonu Üretme" aracı Eclipse
+						EMF tabanlı model güdümlü geliştirme yöntemleri kullanılan tüm
+						projelerde rahatlıkla kullanılabilecek düzeydedir. EMF ("Eclipse
+						Modeling Framework") projesi, yapılandırılmış bir veri modeline
+						dayalı gerekli araçları ve diğer uygulamaları oluşturmaya yarayan
+						otomatik araç üretim servisi ve modelleme çatısıdır. Araç,
+						üstmodel dokümantasyonunun proje boyunca güncel kalmasını
+						sağlamaktadır.</p>
+					<p>Araç en gelişkin kod üretme tekniklerinden biri olan Xpand dili
+						kullanılarak gerçekleştirilmiştir. Somut sözdizimi olarak ise EMF
+						("Eclipse Modeling Project") Ecore editörünün "Properties"
+						görünümündeki "gen model documentation" ismindeki "extended
+						attribute" metin giriş alanı kullanılmıştır.</p>
+					<p>Söz konusu çalışmalar 1501-TÜBİTAK Sanayi Ar-Ge Projeleri
+						Desktekleme Programı tarafından desteklenen 3110712 no'lu proje
+						kapsamında yan ürün olarak geliştirilmiştir. Bu araç yardımı ile
+						herhangi bir geliştirme çevrimi sonunda ve proje sonunda tüm
+						spesifikasyonlar otomatik olarak güncel tutulmuştur.</p>
+				</div>
+          </div><!-- /.blog-post -->
+          
+          
+          <div class="blog-post">
+            <div class="toggle-item-title">
+					<div> 
+						<h3 style="float: left; width: 80%;">FM<>MM (Feature Model and Metamodel Sychronization Tool for
+						Software Product Lines)</h3> 
+						<button style="float: right;width: 15%;" id="item3" class="btn btn-lg btn-primary" onclick="view(this);">View Details</button>
+					</div>
+					<p style="clear:both;">Yazılım ürün hattı ("Software Product Line") sürecinde, ilk önce
+						alan analizi gerçekleştirilmektedir. Bu analiz sonucunda alan
+						içerisindeki ortaklıklar ve değişkenlikler belirlenmekte ve
+						genellikle bir yetenek modeli ("Feature Model") ile ifade
+						edilmektedir. Yetenek modelleme çalışmasının çıktısı ise
+						genellikle yeteneklerin kavramsal gruplamasını, yetenekler
+						arasındaki ilişkileri ve bağımlılıkları tanımlayan bir çizelgedir.
+						Yazılım ürün hattı yetenekleri, tanımlandıktan ve gerçekleştirimi
+						yapıldıktan sonra yetenek kısıtları ve bağımlılıkları dikkate
+						alınarak bu yeteneklerin ihtiyaca göre bir alt kümesi seçilir ve
+						seçilen yeteneklere sahip yeni bir yazılım elde edilir.</p>
+				</div>
+				<div class="toggle-item-body" id="item3Body" style="display: none;">
+					<p>Öte yandan yazılım ürün hatta mühendisliği süreçlerinde yeniden
+						kullanılabilir bir platform ve ürün hattı mimarisinin
+						geliştirildiği bir alan mühendisliği ile alan mühendisliği süreci
+						sonucunda elde edilen varlıklardan ürünlerin geliştirildiği bir
+						uygulama mühendisliği süreci yer alır. Alan ve Uygulama
+						Mühendisliğinde, Model Güdümlü Mühendislik ("Model Driven
+						Engineering") teknikleri sıklıkla kullanılmakta ve özellikle Alana
+						Özgü Diller ("Domain Specific Languages") geliştirilmektedir.
+						Endüstride bu alanda yaygın olarak kullanılan ve açık kaynak kodlu
+						gelişkin çatılardan biri Eclipse EMF ("Eclipse Modeling
+						Framework") teknolojisidir.</p>
+					<p>Endüstride kullanılan açık kaynak kodlu çoğu Yetenek Modelleme
+						araçlarına ait yetenekler kısıtlı iken ticari olanlarınının ise
+						lisans maliyetleri oldukça yüksektir. Aralarında açık kaynak kodlu
+						ve gelişkin bir yetenek modelleme dili olan Clafer öne
+						çıkmaktadır. Ancak Clafer aracının Eclipse EMF teknolojileri ile
+						entegrasyonu yoktur ve Eclipse Modelleme alt yapısı ile
+						geliştirilmemiştir. Bu sebeple bu araç ile geliştirilen
+						yeteneklerin alana özgü dil geliştirme çalışmasından biri olan
+						üstmodelleme aktivitesine geçişte izlenebilirliği kaybolmaktadır.</p>
+					<p>Bu ihtiyaçtan yola çıkarak, Yetenek Modelleri ("Feature Models")
+						ile Üstmodeller ("Metamodels") arasında senkronizasyon sağlayan
+						bir araç geliştirilmiştir. Clafer ile üretilen modeller ile Ecore
+						üst-modelleri arasında iki yönlü dönüşümü otomatik olarak
+						gerçekleştirebilmektedir. Araç, Eclipse EMF tabanlı model güdümlü
+						geliştirme yöntemleri kullanılan tüm projelerde rahatlıkla
+						kullanılabilecek düzeydedir.</p>
+					<p>Söz konusu çalışmalar 1501-TÜBİTAK Sanayi Ar-Ge Projeleri
+						Desktekleme Programı tarafından desteklenen 3110712 no'lu proje
+						kapsamında yan ürün olarak geliştirilmiştir.</p>
+				</div>
+          </div><!-- /.blog-post -->
+    
+    </div>
+    <hr class="featurette-divider"> 
     <footer class="footer">
       <div class="container">
           <p>&copy; UNIT Information Technologies R&D Ltd.  &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
