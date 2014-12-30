@@ -30,3 +30,17 @@ body {
 	-khtml-opacity: 0.5;
 	opacity: 0.5;
 }
+
+.toggle-item-title {
+	cursor: pointer;
+}
+
+.toggle-item-title {
+	
+	padding: 0 32px 0 0;
+}
+
+.toggle-item-title.ui-state-active {
+
+	padding: 0 32px 0 0;
+}
